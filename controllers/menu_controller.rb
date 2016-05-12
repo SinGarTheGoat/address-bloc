@@ -125,17 +125,17 @@
 
    def view_an_entry
      puts "Enter the number of the entrie you would like to search for"
-     selection=gets.chomp
-     unless slection >entries.length then
+     selection=gets.chomp.to_i
+     unless slection >@AddressBook.entries.length then
      puts "Hey bro that is not a valid entry try again"
      view_an_entry
-   else 
-     puts "#{entries[selection]}"
+   else
+     puts "#{@AddressBook.entries[selection]}"
 
    end
 
 
 
 
-
+end
  end
