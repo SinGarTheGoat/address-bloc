@@ -16,7 +16,8 @@
      puts "2 - Create an entry"
      puts "3 - Search for an entry"
      puts "4 - Import entries from a CSV"
-     puts "5 - Exit"
+     puts "5 - View Entry Number n"
+     puts "6 - Exit"
      print "Enter your selection: "
 
      # #3
@@ -41,6 +42,11 @@
               read_csv
               main_menu
             when 5
+              system "clear"
+              view_an_entry
+              main_menu
+
+            when 6
               puts "Good-bye!"
               # #8
               exit(0)
@@ -116,4 +122,20 @@
          entry_submenu(entry)
      end
    end
+
+   def view_an_entry
+     puts "Enter the number of the entrie you would like to search for"
+     selection=gets.chomp
+     unless slection >entries.length then
+     puts "Hey bro that is not a valid entry try again"
+     view_an_entry
+   else 
+     puts "#{entries[selection]}"
+
+   end
+
+
+
+
+
  end
