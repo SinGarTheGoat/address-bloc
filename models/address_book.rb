@@ -38,6 +38,7 @@ class AddressBook
         entries.delete_at(index)
       end
     end
+
   end
 end
 
