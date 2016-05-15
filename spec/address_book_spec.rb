@@ -91,19 +91,19 @@ end
   #added for assignment 21
   it "imports the 6th entry" do
     book.import_from_csv("./models/entries_2.csv")
-    entry_six =  book.entries[5]
+    entry_six =  book.entries[0]
     check_entry(entry_six, "Bill_2", "666-666-4854", "bill2@blocmail.com")
   end
 
   it "imports the 7th entry" do
     book.import_from_csv("./models/entries_2.csv")
-    entry_seven =  book.entries[6]
+    entry_seven =  book.entries[1]
     check_entry(entry_seven, "Bob_2", "666-666-5415" , "bob2@blocmail.com")
   end
 
   it "imports the 8th entry" do
     book.import_from_csv("./models/entries_2.csv")
-    entry_eight = book.entries[7]
+    entry_eight = book.entries[2]
     check_entry(entry_eight, "Joe_2","666-666-3660" ,"joe2@blocmail.com")
   end
 
