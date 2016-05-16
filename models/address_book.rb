@@ -64,6 +64,14 @@ class AddressBook
             entries.delete_at(index) if name == entry.name
         end
     end
+
+    def iterative_search(name)
+        @entries.each do |entry|
+          if entry.name == name
+            return entry
+          end
+        end
+    end
 end
 
 # eddit entry

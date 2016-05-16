@@ -126,7 +126,7 @@
    def view_an_entry
      puts "Enter the number of the entrie you would like to search for"
      selection=gets.chomp.to_i
-     binding.pry
+
      if selection > address_book.entries.length
        puts "Hey bro that is not a valid entry try again"
        view_an_entry
