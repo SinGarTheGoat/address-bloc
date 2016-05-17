@@ -17,7 +17,8 @@
      puts "3 - Search for an entry"
      puts "4 - Import entries from a CSV"
      puts "5 - View Entry Number n"
-     puts "6 - Exit"
+     puts "6 - exit"
+     puts "7 - obliterate"
      print "Enter your selection: "
 
      # #3
@@ -50,6 +51,14 @@
               puts "Good-bye!"
               # #8
               exit(0)
+            when 7
+              address_book.obliterate
+              system "clear"
+              puts "your entries are dust"
+              puts "press any key to return to the main menu"
+              gets.chomp
+              system "clear"
+              main_menu
             # #9
             else
               system "clear"

@@ -133,4 +133,18 @@ RSpec.describe AddressBook do
             expect(entry).to be_nil
         end
     end
+    describe "#obliterate" do
+      it 'cleares entry hash' do
+      book.import_from_csv('./models/entries.csv')
+        binding.pry
+       book.obliterate
+       expect(book.entries.size).to eq(0)
+       binding.pry
+
+      # expect { book.obliterate }
+      #   .to change { book.entries.size }.from(5).to(0)
+  end
+    end
+
+
 end # replacement end

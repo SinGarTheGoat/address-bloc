@@ -64,6 +64,11 @@ class AddressBook
             entries.delete_at(index) if name == entry.name
         end
     end
+    
+    def obliterate
+      @entries.clear
+    end
+
 end
 
 # eddit entry
